@@ -1,0 +1,13 @@
+{
+  "name": "afriserve-backend",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node --trace-warnings ./bin/index",
+    "dev": " nodemon .bin/index",
+    "up": "sequelize db:migrate --migrations-path './db/migrations'",
+    "down": "sequelize db:migrate:undo --migrations-path './db/migrations'",
+    "migrate-test": "npx sequelize-cli db:migrate --config ./config/config.js --env test",
+    "migrate-develop": "npx sequelize-cli db:migrate --config ./config/config.js --env development"
+  }
+}

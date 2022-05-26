@@ -1,0 +1,70 @@
+{
+  "name": "afriserve-backend",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node --trace-warnings ./bin/index",
+    "dev": " nodemon .bin/index",
+    "up": "sequelize db:migrate --migrations-path './db/migrations'",
+    "down": "sequelize db:migrate:undo --migrations-path './db/migrations'",
+    "migrate-test": "cd db && npx sequelize-cli db:migrate --config ../config/config.js --env test",
+    "migrate-development": "cd db && npx sequelize-cli db:migrate --config ../config/config.js --env development"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^7.6.0",
+    "aws-sdk": "^2.991.0",
+    "axios": "^0.21.4",
+    "bcrypt": "^5.0.1",
+    "bluebird": "^3.7.2",
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "dotenv": "^10.0.0",
+    "exceljs": "^4.3.0",
+    "express": "~4.16.1",
+    "express-device": "^0.4.2",
+    "express-useragent": "^1.0.15",
+    "firebase-admin": "^10.0.0",
+    "helmet": "^4.6.0",
+    "http-errors": "~1.6.3",
+    "jade": "^0.29.0",
+    "joi": "^17.4.2",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "~1.9.1",
+    "multer": "^1.4.3",
+    "node-cron": "^3.0.0",
+    "node-fetch": "^3.1.1",
+    "otp-generator": "^2.0.1",
+    "pg": "^8.7.1",
+    "qs": "^6.10.1",
+    "redis": "^4.0.0",
+    "sequelize": "^6.6.5",
+    "socket.io": "^4.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "jest": "^27.2.0",
+    "mysql2": "^2.3.0",
+    "nodemon": "^2.0.12",
+    "sequelize-cli": "^5.4.0"
+  },
+  "engines": {
+    "node": ">=14.2.0"
+  },
+  "engineStrict": true,
+  "package": {
+    "name": "afriserve-backend",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+      "start": "node --trace-warnings ./bin/index",
+      "dev": " nodemon .bin/index",
+      "up": "sequelize db:migrate --migrations-path './db/migrations'",
+      "down": "sequelize db:migrate:undo --migrations-path './db/migrations'",
+      "migrate-test": "npx sequelize-cli db:migrate --config ./config/config.js --env test",
+      "migrate-develop": "npx sequelize-cli db:migrate --config ./config/config.js --env development"
+    }
+  }
+}
